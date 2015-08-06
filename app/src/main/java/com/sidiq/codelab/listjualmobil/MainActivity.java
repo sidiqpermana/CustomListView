@@ -1,8 +1,8 @@
 package com.sidiq.codelab.listjualmobil;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,7 +12,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
     String[][] data = new String[][]{
             {"Honda, Brio, 1.2L CKD S A/T, 2015", "http://imgcdn.rajamobil.com:8080/resize2/public/media/images/databasemobil/original/2015/06/14/honda-brio-baru-mobil-dijual-jakarta-selatan-img_1-1434276927_346414789.jpg?v=250",
             "19 Juta", "Jakarta Selatan"},

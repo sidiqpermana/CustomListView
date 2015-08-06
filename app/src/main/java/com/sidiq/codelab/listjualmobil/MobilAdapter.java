@@ -13,11 +13,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-/**
- * Created by Student-12 on 16/06/2015.
- */
 public class MobilAdapter extends BaseAdapter {
-
+    // params
     ArrayList<MobilModel> listItem;
     Activity activity;
 
@@ -26,11 +23,14 @@ public class MobilAdapter extends BaseAdapter {
         this.listItem = listItem;
     }
 
+    //method ini akan menentukan seberapa banyak data yang akan ditampilkan didalam ListView
+    //listItem.size() == jumlah data dalam object List yang ada
     @Override
     public int getCount() {
         return listItem.size();
     }
 
+    //method ini untuk mengakses per-item objek dalam list
     @Override
     public Object getItem(int position) {
         return listItem.get(position);
@@ -41,6 +41,8 @@ public class MobilAdapter extends BaseAdapter {
         return 0;
     }
 
+    //method ini yang akan menampilkan baris per baris dari item yang ada di ListView
+    //dengan menggunakan pattern ViewHolder untuk optimasi performa dari ListView
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
