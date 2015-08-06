@@ -58,7 +58,7 @@ public class MobilAdapter extends BaseAdapter {
         }else{
             holder = (ViewHolder)view.getTag();
         }
-        
+
         MobilModel mobil = (MobilModel)getItem(position);
         holder.txtTitle.setText(mobil.getTitle());
         holder.txtHarga.setText(mobil.getHarga());
