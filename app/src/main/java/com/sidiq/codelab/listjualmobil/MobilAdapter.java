@@ -33,7 +33,7 @@ public class MobilAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return listItem.get(position);
     }
 
     @Override
@@ -58,12 +58,13 @@ public class MobilAdapter extends BaseAdapter {
         }else{
             holder = (ViewHolder)view.getTag();
         }
+        
+        MobilModel mobil = (MobilModel)getItem(position);
+        holder.txtTitle.setText(mobil.getTitle());
+        holder.txtHarga.setText(mobil.getHarga());
+        holder.txtLokasi.setText(mobil.getLokasi());
 
-        holder.txtTitle.setText(listItem.get(position).getTitle());
-        holder.txtHarga.setText(listItem.get(position).getHarga());
-        holder.txtLokasi.setText(listItem.get(position).getLokasi());
-
-        Picasso.with(activity).load(listItem.get(position).getImage()).into(holder.imgItem);
+        Picasso.with(activity).load(mobil.getImage()).into(holder.imgItem);
 
         return view;
     }
